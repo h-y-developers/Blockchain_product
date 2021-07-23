@@ -1,0 +1,11 @@
+{% load static %}
+
+{% include 'navbar.html' %}
+              </div>
+                          {% for message in messages %}
+                <div class="form-group mt-4 mb-4 {{ message.tags }} text-left alert-dismissible fade show" style="font-size: 12px;" role="alert">
+                  {{ message }}
+                  
+                </div>
+                {% endfor %}
+{% comment %} {% include 'footer.html' %} {% endcomment %}

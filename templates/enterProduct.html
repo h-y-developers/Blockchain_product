@@ -1,0 +1,228 @@
+{% load static %}
+{% include 'navbar.html' %}
+        <div class="container-fluid">
+            <div class="container-scroller">
+              <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Product Details Form</h4>
+                  <form class="form-sample" method="POST" action="" enctype="multipart/form-data">
+                  {% csrf_token %}
+                    <p class="card-description">
+                      Manufactorer's Personal info
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">First Name</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="fname" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Last Name</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="lname" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Company Name</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="cname" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Product Name</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="pname" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Product Manufactorer Name</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control"  name="mname"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Product No.</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="pnum" />
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Category</label>
+                          <div class="col-sm-9">
+                            <select class="form-control" name="category">
+                              <option value="mb">Mobile & Accesary</option>
+                              <option value="fb">Food and Bevarages</option>
+                              <option value="cl">Clothing</option>
+                              <option value="el">Electronics</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      {% comment %} <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Product Authenticity</label>
+                          <div class="col-sm-4">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked>
+                                Original 
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-sm-5">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2">
+                               First Copy
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div> {% endcomment %}
+                   
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label></label>
+
+                            <input type="file" name="img" class="file-upload-default">
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled placeholder="Upload images">
+                                    <span class="input-group-append">
+                                    <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                                    </span>
+                                </div>
+                        </div>
+                    </div>
+                </div> 
+
+
+                    <p class="card-description">
+                      Contact Info
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Landline No.</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="lno" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Mobile No.</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="mno" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <p class="card-description">
+                      Address
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Address 1</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="address1" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">State</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="state"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Address 2</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="address2"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" >Postcode</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="pcode"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">City</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="city"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Country</label>
+                          <div class="col-sm-9">
+                            <select class="form-control" name="country">
+                              <option value="us">America</option>
+                              <option value="it">Italy</option>
+                              <option value="rs">Russia</option>
+                              <option value="brt">Britain</option>
+                              <option value="in">India</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 mt-4 mb-4 text-center">
+
+                            <button type="submit" class="btn btn-primary btn-icon-text subBtn mr-4 snackbar"  data-pos="bottom-center">
+                            <i class="icon-check btn-icon-prepend"></i> Submit </button>
+
+
+                            <button type="cancel" class="btn btn-danger btn-icon-text resetBtn">
+                            <i class="icon-reload btn-icon-prepend"></i> Reset </button>
+                        </div>
+
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
